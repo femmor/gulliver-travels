@@ -1,5 +1,6 @@
-import React, {FC} from 'react';
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import React, { FC } from 'react';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { Home } from './src/screens';
 
 type AppProps = {};
 
@@ -7,7 +8,7 @@ const App: FC<AppProps> = () => {
   return (
     <SafeAreaView style={styles.safeView}>
       <View>
-        <Text>Welcome to Gulliver Travel App</Text>
+        <Home />
       </View>
     </SafeAreaView>
   );
