@@ -1,20 +1,18 @@
-import React, {FC} from 'react';
-import {View, SafeAreaView, Text} from 'react-native';
+import React, { FC } from 'react';
+import { View, SafeAreaView, Text } from 'react-native';
 
 import styles from './styles';
 
 type Props = {
-  text: string,
+  text?: string,
 };
 
-const Title: FC<Props> = ({text}) => {
-  return (
-    <SafeAreaView>
-      <View>
-        <Text style={styles.title}>{text}</Text>
-      </View>
-    </SafeAreaView>
-  );
+const Title: FC<Props> = ({ text }) => {
+  return <Text style={styles.title}>{text}</Text>;
+};
+
+Title.defaultProps = {
+  text: 'Default text',
 };
 
 export default Title;
