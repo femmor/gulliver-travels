@@ -1,9 +1,9 @@
 import React, { memo, useState } from 'react'
-import { FlatList, Text, View } from 'react-native'
+import { FlatList, Text, View, TouchableOpacity } from 'react-native'
 
 import styles from './styles'
 
-const Categories = ({ categories, selectedCategory }) => {
+const Categories = ({ categories, selectedCategory, onCategoryPress }) => {
 
   return (
     <FlatList 
@@ -12,13 +12,17 @@ const Categories = ({ categories, selectedCategory }) => {
             const selected = selectedCategory === item
 
             return (
-                <View style={[styles.categoryContainer, selected ? styles.selectedItemContainer : {}]}>
+                <TouchableOpacity style={[styles.categoryContainer, selected ? styles.selectedItemContainer : {}]} onPress={() => onCategoryPress(item)}>
                     <Text style={[styles.category, selected ? styles.selected : {}]}>{item}</Text>
-                </View>
+                </TouchableOpacity>
             )
         }}
         keyExtractor={item => item}
         horizontal
+        showsHorizontalScrollIndicator={false}
+        style={{
+            marginRight: -32,
+        }}
     />
   )
 }
