@@ -2,9 +2,8 @@ import React, { FC } from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { Home } from './src/screens';
 
-type AppProps = {};
 
-const App: FC<AppProps> = () => {
+const App = () => {
   return (
     <SafeAreaView style={styles.safeView}>
       <View>

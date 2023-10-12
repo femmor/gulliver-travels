@@ -3,11 +3,8 @@ import { View, SafeAreaView, Text } from 'react-native';
 
 import styles from './styles';
 
-type Props = {
-  text?: string,
-};
 
-const Title: FC<Props> = ({ text }) => {
+const Title = ({ text }) => {
   return <Text style={styles.title}>{text}</Text>;
 };
 
