@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { View, SafeAreaView } from 'react-native';
 import styles from './styles';
 
-import { Title } from '../../components';
+import { Title, Categories } from '../../components';
 
 const Home = () => {
   return (
@@ -13,6 +13,7 @@ const Home = () => {
         }}/>
         <Title text="you want to go" />
         <Title text="Explore Attractions" style={styles.subTitle}/>
+        <Categories categories={["All", 'Popular', 'Historical', 'Trending', 'Exclusive', 'Others']} selectedCategory="All" />
       </View>
     </SafeAreaView>
   );
